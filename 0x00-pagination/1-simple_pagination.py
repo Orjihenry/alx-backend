@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-''' Pagination '''
+''' Simple Pagination '''
 import csv
 import math
 from typing import Tuple, List
@@ -18,6 +18,7 @@ class Server:
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        ''' Initialize '''
         self.__dataset = None
 
     def dataset(self) -> List[List]:
@@ -32,6 +33,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        ''' Returns start and end from data '''
         assert type(page) == int and page > 0
         assert type(page_size) == int and page > 0
 
